@@ -19,6 +19,7 @@ app.use((req, res, next) => {
   next();
 })
 
+
 // app.use((req, res, next) => {
 //   res.render('maintenance.hbs');
 // })
@@ -41,6 +42,12 @@ app.get('/about', (req, res) => {
     pageTittle: 'About Page Faza',
 
   });
+})
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTittle: 'Projects in Page'
+  })
 })
 
 app.get('/bad', (req, res) => {
